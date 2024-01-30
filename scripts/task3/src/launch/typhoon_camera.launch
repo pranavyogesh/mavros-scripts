@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="vehicle" default="typhoon_h480"/>
+    <!-- Below path depends on where 'Firmware is installed '  -->
+    <arg name="sdf" default="/home/py20/Firmware/Tools/sitl_gazebo/models/typhoon_h480/typhoon_h480.sdf"/>
+
+    <include file="$(find px4)/launch/mavros_posix_sitl.launch">
+    	<arg name="sdf" default="/home/py20/Firmware/Tools/sitl_gazebo/models/typhoon_h480/typhoon_h480.sdf"/>
+        <arg name="respawn_gazebo" value="true"/>
+        <arg name="respawn_mavros" value="true"/>
+        <arg name="vehicle" value="$(arg vehicle)"/>
+        <!-- <arg name="sdf" value="$(arg sdf)"/> -->
+        <arg name="verbose" value="true"/>
+    </include>

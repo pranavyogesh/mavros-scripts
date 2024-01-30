@@ -1,0 +1,20 @@
+<launch>
+  <arg name="camera_name" default="/cgo3_camera" />
+  <arg name="camera_frame" default="cgo3_camera_optical_frame" />
+  <arg name="image_topic" default="image_raw" />
+  <!-- Start marker detector--> 
+  <node name="aruco_detect" pkg="aruco_detect" type="aruco_detect">
+    <param name="image_transport" value="compressed" />
+    <param name="publish_images" value="true" />
+
+    <!-- edge length of aruco marker -->
+    <param name="fiducial_len" value="0.1" />
+    <!-- marker index to look for -->
+    <param name="dictionary" value="0" />
+    <param name="do_pose_estimation" value="true" />
+    <param name="ignore_fiducials" value="" />
+    <param name="fiducial_len_override" value="" />
+    <remap from="/camera/compressed" to="/mavros/camera/image_captured"/>
+    <remap from="/camera_info" to="$(arg camera_name)/camera_info"/>
+  </node>
+</launch>
