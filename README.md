@@ -8,5 +8,5 @@ Before running python script, run the following:
  
  roslaunch mavros px4.launch fcu_url:="udp://:14540@127.0.0.1:14557"
 
-[![Demo](https://github.com/pranavyogesh/mavros-scripts/blob/main/img.png)](https://github.com/pranavyogesh/mavros-scripts/blob/092b23a460a9d05fba9ade9b9b8fe5a3fa4796ae/spiral.mp4)
+[![Demo](https://github.com/pranavyogesh/mavros-scripts/blob/688808c52e2960d7fc172b94da110a72f34cabf4/img.png)](https://github.com/pranavyogesh/mavros-scripts/blob/092b23a460a9d05fba9ade9b9b8fe5a3fa4796ae/spiral.mp4)
 
